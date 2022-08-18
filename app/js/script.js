@@ -1,5 +1,5 @@
 function hideSections() {
-    let sections = document.querySelectorAll(".content div");
+    let sections = document.querySelectorAll(".content > div");
     for(let section of sections) {
         section.style.display = "none";
     }

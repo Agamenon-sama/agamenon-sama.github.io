@@ -114,7 +114,7 @@ li a:hover {
 
 /* sections */
 
-.content div {
+.content > div {
     width: calc(80% - 50px);
     margin-top: 80vh; /* positioning the divs at 80% of the viewport height */
     margin-left: auto;
@@ -138,6 +138,38 @@ li a:hover {
 /* portfolio */
 #portfolio{
     display: none;
+}
+
+.portfolioEntries {
+    display: block;
+}
+
+.portfolioEntry {
+    display: block;
+    border-bottom: 1px solid #1e1e1e;
+    padding: 5px;
+}
+.portfolioEntry:hover {
+    background-color: rgba(17, 17, 17, .5);
+}
+
+.portfolioEntry a,
+.portfolioEntry a:hover,
+.portfolioEntry a:visited,
+.portfolioEntry a:active {
+    color: #eee;
+    text-decoration: underline;
+}
+
+.portfolioEntry img {
+    width: 20%;
+    /* height: 200px; */
+    /* float: right; */
+}
+
+.textColumn {
+    width: 80%;
+    float: left;
 }
 
 /* resume */
