@@ -186,6 +186,17 @@ iframe {
     display: none;
 }
 
+#contact a {
+    color: #ccc;
+    text-decoration: none;
+}
+
+.icon {
+    width: 24px;
+    height: 24px;
+    display: inline;
+}
+
 /* Blog */
 .darkBg {
     display: none;
