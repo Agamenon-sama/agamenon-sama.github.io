@@ -148,15 +148,13 @@ li a:hover {
     display: block;
     border-bottom: 1px solid #1e1e1e;
     padding: 5px;
+    overflow: scroll;
 }
 .portfolioEntry:hover {
     background-color: rgba(17, 17, 17, .5);
 }
 
-.portfolioEntry a,
-.portfolioEntry a:hover,
-.portfolioEntry a:visited,
-.portfolioEntry a:active {
+.portfolioEntry a {
     color: #eee;
     text-decoration: underline;
 }
