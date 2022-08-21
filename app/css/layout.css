@@ -30,7 +30,7 @@ html {
 body {
     min-height: 100%;
     margin: 0;
-    background-image: url("../res/index-bg.jpg"); /* Credits: to https://www.pixiv.net/en/users/8782286 */
+    background-image: url("../res/images/index-bg.jpg"); /* Credits: to https://www.pixiv.net/en/users/8782286 */
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
