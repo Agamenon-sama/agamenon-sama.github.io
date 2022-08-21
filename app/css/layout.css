@@ -193,7 +193,7 @@ li a:hover {
 }
 iframe {
     width: 100%;
-    /* margin-left: auto; */
+    height: 800px;
 }
 
 /* contact */
