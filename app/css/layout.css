@@ -162,7 +162,8 @@ li a:hover {
 }
 
 .portfolioEntry {
-    display: block;
+    display: grid;
+    grid-template-columns: 80% 20%;
     border-bottom: 1px solid #1e1e1e;
     padding: 5px;
     overflow: scroll;
@@ -177,14 +178,11 @@ li a:hover {
 }
 
 .portfolioEntry img {
-    width: 20%;
-    /* height: 200px; */
-    /* float: right; */
+    width: 100%;
 }
 
 .textColumn {
-    width: 80%;
-    float: left;
+    width: 95%;
 }
 
 /* resume */
