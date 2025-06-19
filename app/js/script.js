@@ -1,9 +1,12 @@
+let activeSection = 0;
+
 function hideSections() {
     let sections = document.querySelectorAll(".content > div");
     for(let section of sections) {
         section.style.display = "none";
     }
 }
+
 function scrollDown() {
     if(window.scrollY === 0) {
         window.scrollBy({
@@ -24,48 +27,66 @@ function scrollUp() {
     }
 }
 
-
-let homeLink = document.querySelector('a[href="#home"]');
-homeLink.addEventListener("click", (e) => {
-    e.preventDefault();
+function noSections() {
     scrollUp();
-    setTimeout(hideSections, 300); // a dirty "hack" to give the time for the page to scroll before removing the element
-});
+    setTimeout(hideSections, 300); // give time for the page to scroll before removing the element
+    activeSection = 0;
+}
+
+function displaySection(section, sectionID) {
+    hideSections();
+    section.style.display = "block";
+    scrollDown();
+    activeSection = sectionID;
+}
+
 
 let aboutBlock = document.querySelector("#about");
 let aboutLink = document.querySelector('a[href="#about"]');
 aboutLink.addEventListener("click", (e) => {
     e.preventDefault(); // preventing the page from scrolling by itself
-    hideSections();
-    aboutBlock.style.display = "block";
-    scrollDown();
+    if (activeSection === 1) {
+        noSections();
+    }
+    else {
+        displaySection(aboutBlock, 1);
+    }
 });
 
 let portBlock = document.querySelector("#portfolio");
 let portLink = document.querySelector('a[href="#portfolio"]');
 portLink.addEventListener("click", (e) => {
     e.preventDefault();
-    hideSections();
-    portBlock.style.display = "block";
-    scrollDown();
+    if (activeSection === 2) {
+        noSections();
+    }
+    else {
+        displaySection(portBlock, 2);
+    }
 });
 
 let resumeBlock = document.querySelector("#resume");
 let resumeLink = document.querySelector('a[href="#resume"]');
 resumeLink.addEventListener("click", (e) => {
     e.preventDefault();
-    hideSections();
-    resumeBlock.style.display = "block";
-    scrollDown();
+    if (activeSection === 3) {
+        noSections();
+    }
+    else {
+        displaySection(resumeBlock, 3);
+    }
 });
 
 let contactBlock = document.querySelector("#contact");
 let contactLink = document.querySelector('a[href="#contact"]');
 contactLink.addEventListener("click", (e) => {
     e.preventDefault();
-    hideSections();
-    contactBlock.style.display = "block";
-    scrollDown();
+    if (activeSection === 4) {
+        noSections();
+    }
+    else {
+        displaySection(contactBlock, 4);
+    }
 });
 
 let blogBlock = document.querySelector(".blog");
