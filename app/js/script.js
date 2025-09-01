@@ -89,17 +89,17 @@ contactLink.addEventListener("click", (e) => {
     }
 });
 
-let blogBlock = document.querySelector(".blog");
-let bgBlock = document.querySelector(".darkBg");
-let blogLink = document.querySelector('a[href="#blog"]');
-blogLink.addEventListener("click", (e) => {
-    e.preventDefault();
-    blogBlock.style.display = "block";
-    bgBlock.style.display = "block";
+// let blogBlock = document.querySelector(".blog");
+// let bgBlock = document.querySelector(".darkBg");
+// let blogLink = document.querySelector('a[href="#blog"]');
+// blogLink.addEventListener("click", (e) => {
+//     e.preventDefault();
+//     blogBlock.style.display = "block";
+//     bgBlock.style.display = "block";
     
-});
-let blogBtn = document.querySelector('button');
-blogBtn.addEventListener("click", () => {
-    blogBlock.style.display = "none";
-    bgBlock.style.display = "none";
-});
+// });
+// let blogBtn = document.querySelector('button');
+// blogBtn.addEventListener("click", () => {
+//     blogBlock.style.display = "none";
+//     bgBlock.style.display = "none";
+// });

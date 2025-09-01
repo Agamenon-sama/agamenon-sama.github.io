@@ -1,0 +1,360 @@
+@font-face {
+  font-family: 'Aldrich';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../res/fonts/Aldrich.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+:root {
+  --header-img: url(https://agamenon-sama.github.io/app/res/images/wp.jpeg);
+  --bg-img: url(https://agamenon-sama.github.io/app/res/images/index-bg.jpg);
+  --border-size: 2px;
+  --border-color: #888;
+  --title-color: #ddd;
+  --text-color: #aaa;
+  --purple: #771f8d;
+  --purple-dark: #67157c;
+}
+
+body {
+  display: block;
+  margin: 0 auto;
+  background-color: #101010;
+  background-image: var(--bg-img);
+  background-blend-mode: overlay;
+  background-size: cover;
+  background-attachment: fixed;
+
+  font-family: "Aldrich", monospace;
+}
+
+#root {
+  width: 80%;
+  margin: 0 auto;
+  border: var(--border-size) solid var(--border-color);
+  /* padding: 5px; */
+}
+
+/* Scanlines */
+body::before {
+  content: "";
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(rgba(20, 20, 20, 0) 66%, rgba(0, 0, 0, 0.1) 33%);
+  background-size: 100% 5px;
+  z-index: 9999;
+  pointer-events: none;
+  animation: scanlines-anim 1.0s linear infinite;
+}
+
+@keyframes scanlines-anim {
+  0% {
+    background-position: 0px 0px;
+  }
+  100% {
+    background-position: 0px 15px;
+  }
+}
+
+/* Header */
+.banner {
+  height: 200px;
+  background-size: 100%;
+  background-image: var(--header-img);
+
+  border-bottom: var(--border-size) solid var(--border-color);
+  position: relative;
+}
+
+.blog-title {
+  font-size: 50px;
+  color: #999;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  text-shadow: 0 0 10px var(--purple);
+}
+
+
+.central-piece {
+  width: 100%;
+  display: flex;
+  gap: 10px;
+}
+
+
+/* Main block */
+main {
+  width: 75%;
+  margin: 10px 10px 10px 0;
+}
+
+.post-meta {
+  font-size: 0.8em;
+  color: #555;
+}
+
+main h1 {
+  font-size: 1.8em;
+  /* text-decoration: underline; */
+  border-bottom: 1px solid #8888883e;
+  color: var(--title-color);
+  padding: 5px;
+}
+main h2 {
+  color: var(--title-color);
+  padding: 5px;
+}
+main h3 {
+  color: var(--title-color);
+  padding: 5px;
+}
+
+main img {
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
+main a {
+  color: var(--purple-dark);
+}
+
+main a:hover {
+  color: #ae37cc;
+}
+
+/* Lists */
+main li {
+  padding: 2px;
+}
+/* 
+main ul {
+  list-style: "> ";
+} */
+
+math {
+  font-size: 26px;
+}
+
+/* Tables */
+main table {
+  max-width: 100%;
+  margin-left: 25px;
+  margin-right: 25px;
+  border-collapse: collapse;
+}
+
+main table th {
+  padding: 15px;
+  border: 1px solid #8888883e;
+  text-align: center;
+  font-weight: bold;
+}
+
+main table td {
+  padding: 15px;
+  border: 1px solid #8888883e;
+  text-align: left;
+}
+
+main table tr:nth-child(even) {
+  background-color: #1e1e1e3e;
+}
+
+/*
+  tables by default are attached so if 2 or more tables come after
+  each other, we add some margin to the later to space them a little
+*/
+table + table {
+  margin-top: 15px;
+}
+
+/* comments */
+.new-comment-block {
+  margin-bottom: 20px;
+}
+
+.new-comment-block h3 {
+  margin: 0 3px 10px 3px;
+}
+
+.new-comment-block label {
+  width: 100%;
+  display: flex;
+  gap: 5px;
+  margin: 3px;
+}
+
+.comment-form-label {
+  width: 20%;
+}
+
+.new-comment-block input:not(.submit-comment-btn),
+.new-comment-block textarea {
+  width: 80%;
+  background: #1e1e1e3e;
+  border: 1px solid #8888883e;
+  color: #bbb;
+  outline: none;
+  transition: 0.3s;
+}
+
+
+.new-comment-block input:not(.submit-comment-btn):hover,
+.new-comment-block input:not(.submit-comment-btn):focus,
+.new-comment-block textarea:hover,
+.new-comment-block textarea:focus {
+  border: 1px solid #bbbbbb3e;
+  box-shadow: 0 0 2px white;
+  transition: 0.3s;
+}
+
+#submit-comment-btn {
+  border: 1px solid #8888883e;
+  background-color: transparent;
+  color: var(--text-color);
+  font-family: "Aldrich", monospace;
+  float: right;
+  width: 15%;
+}
+
+.comment {
+  border-bottom: 1px solid #8888883e;
+  padding: 15px;
+}
+.comment:nth-child(odd) {
+  background-color: #1e1e1e3e;
+}
+.comment-author {
+  font-weight: bold;
+  color: var(--title-color);
+}
+.comment-date {
+  font-style: italic;
+  font-size: 0.8em;
+  color: #555;
+}
+
+/* Aside block */
+aside {
+  width: 25%;
+  margin: 10px 0 10px 10px;
+}
+
+aside ul {
+  margin: 5px 0 5px 0;
+  list-style: none;
+}
+
+
+aside ul li {
+  padding: 5px;
+  position: relative;
+}
+
+aside ul li::before {
+  content: "";
+  background-image: url("https://agamenon-sama.github.io/app/res/icons/cybTriangle.svg");
+  background-size: cover;
+  position: absolute;
+  top: 5px;
+  left: -25px;
+  width: 20px;
+  height: 17px;
+  transition: 0.3s;
+}
+aside ul li:hover::before {
+  transform: rotate(0.5turn);
+  transition: 0.3s;
+}
+
+aside ul li a {
+  text-decoration: none;
+  color: var(--text-color);
+  transition: 0.3s;
+}
+
+aside ul li a:hover {
+  letter-spacing: 2px;
+  text-shadow: var(--purple) 1px 1px 1px;
+  transition: 0.3s;
+}
+
+/* Footer */
+footer {
+  color: var(--text-color);
+  text-align: center;
+}
+
+footer .buttons img {
+  width: 88px;
+  height: 31px;
+}
+
+/* Card */
+.card {
+  border: var(--border-size) solid var(--border-color);
+  margin: 5px 0 10px 0;
+}
+
+.card-header {
+  padding: 8px;
+  border-bottom: var(--border-size) solid var(--border-color);
+  text-align: center;
+  color: var(--title-color);
+  font-size: 25px;
+  font-style: italic;
+}
+
+.card-content {
+  padding: 6px;
+  color: var(--text-color);
+}
+
+main .card .card-header {
+  border: none;
+  text-align: left;
+  font-size: 2em; /* h1 size, hopefully */
+}
+
+/* Searchbox */
+.search-form {
+  width: 100%;
+  display: flex;
+  gap: 5px;
+}
+
+.search-box {
+  width: 80%;
+  border: solid var(--border-color) var(--border-size);
+  background-color: transparent;
+  color: var(--text-color);
+  font-family: "Aldrich", monospace;
+  font-size: 13px;
+}
+
+.search-button {
+  width: 20%;
+  border: solid var(--border-color) var(--border-size);
+  background-color: transparent;
+  color: var(--text-color);
+}
+
+.search-button img {
+  width: 13px;
+  height: 13px;
+}
+
+/* This is for the search results in the main section not the side */
+.search-result {
+  padding: 20px;
+  border-bottom: 1px solid #8888883e;
+}
+

@@ -1,0 +1,55 @@
+code {
+    color: #bbb;
+}
+
+.hljs-meta,
+.hljs-keyword { color: #8a2ba2; }
+.hljs-type,
+.hljs-number { color: #2873b4; }
+.hljs-comment { color: #808080; font-style: italic; }
+.hljs-string { color: #0f520d; }
+.hljs-params { color: #bbb; }
+.hljs-literal,
+.hljs-title,
+/* .hljs-function { color: #850b0b; } */
+/* .hljs-function { color: #fae951; } */
+/* .hljs-function { color: #cf9b0b; } */
+.hljs-function { color: #1aa316; } /* I just don't like this, should change */
+
+.code-block {
+    background: #1e1e1e3e;
+    border: 1px solid #8888883e;
+    padding: 0;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+.code-header {
+    background: #1119;
+    padding: 10px 20px 10px 20px;
+    display: flex;
+}
+
+.lang-info {
+    margin-right: auto;
+    text-transform: capitalize;
+}
+
+.clipboard-btn {
+    /* width: 20%; */
+    border: 1px solid #8888883e;
+    background-color: transparent;
+    color: var(--text-color);
+    font-family: "Aldrich", monospace;
+}
+
+.clipboard-btn:hover {
+    background-color: #eee3;
+    cursor: pointer;
+}
+
+pre {
+    padding: 0 20px 0 20px;
+    line-height: 1.5;
+}
+
