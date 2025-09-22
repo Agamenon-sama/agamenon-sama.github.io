@@ -4,14 +4,14 @@
         <title>Agamenon's Blog</title>
         <link>https://agamenon-sama.github.io/</link>
         <description>A blog where I talk about nerdy stuff</description>
-        <language>en-uk</language>
+        <language>en-gb</language>
         <webMaster>chams0099@gmail.com (Chams Eddine Hachani)</webMaster>
         <copyright>Copyright © 2025 Agamenon</copyright>
         <ttl>1440</ttl> <!-- 1 day -->
         
         <item>
             <title>Post Demo</title>
-            <link>https://localhost/blog/1/example</link>
+            <link>https://agamenon-sama.github.io/blog/1/example</link>
             <description>no description</description>
             <pubDate>Wed, 23 Jul 2025 21:18:20 200</pubDate>
         </item>
